@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0461E2FE246015C7004880B8 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461E2FD246015C7004880B8 /* SearchTableViewController.swift */; };
+		0461E30024601628004880B8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461E2FF24601628004880B8 /* SettingsViewController.swift */; };
+		04A59443245F08A50081FF68 /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59442245F08A50081FF68 /* Quake.swift */; };
+		04A59446245F16C60081FF68 /* QuakeResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59445245F16C50081FF68 /* QuakeResults.swift */; };
+		04A59447245F18CD0081FF68 /* QuakeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69304923F5DDAA00C0DF09 /* QuakeFetcher.swift */; };
+		04A59449245F21390081FF68 /* Quake+MKAnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59448245F21390081FF68 /* Quake+MKAnotation.swift */; };
+		04A5944A245F4F480081FF68 /* QuakeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482541236B3C4F00FC12E9 /* QuakeDetailView.swift */; };
+		04DC3E802465AE0300CFB3AF /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3E7F2465AE0300CFB3AF /* Formatter.swift */; };
+		04DC3E822466939300CFB3AF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3E812466939300CFB3AF /* WebViewController.swift */; };
+		04DC3E84246823B900CFB3AF /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3E83246823B900CFB3AF /* GraphView.swift */; };
+		04DD48272462ABFB00FEBFED /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD48262462ABFB00FEBFED /* DetailViewController.swift */; };
+		659F10BE819CEF6678C78292 /* Pods_Quakes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B26E322494EE4578EBCB6 /* Pods_Quakes.framework */; };
+		662AF414BF2104C7E0743675 /* Pods_QuakesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B8DE9CAFD072C29138F57B /* Pods_QuakesTests.framework */; };
+		BD48251A236B3B6600FC12E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482519236B3B6600FC12E9 /* AppDelegate.swift */; };
+		BD48251C236B3B6600FC12E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48251B236B3B6600FC12E9 /* SceneDelegate.swift */; };
+		BD482523236B3B6800FC12E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD482522236B3B6800FC12E9 /* Assets.xcassets */; };
+		BD482526236B3B6800FC12E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD482524236B3B6800FC12E9 /* LaunchScreen.storyboard */; };
+		BD482531236B3B6800FC12E9 /* QuakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482530236B3B6800FC12E9 /* QuakeTests.swift */; };
+		BD48253C236B3BD500FC12E9 /* EarthquakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48253B236B3BD500FC12E9 /* EarthquakesViewController.swift */; };
+		BD48253F236B3C4400FC12E9 /* Quake.json in Resources */ = {isa = PBXBuildFile; fileRef = BD48253D236B3C4400FC12E9 /* Quake.json */; };
+		BD482540236B3C4400FC12E9 /* QuakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48253E236B3C4400FC12E9 /* QuakeData.swift */; };
+		BD6DDD1B23993CB100CA2A91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6DDD1A23993CB100CA2A91 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD48252D236B3B6800FC12E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD48250E236B3B6600FC12E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD482515236B3B6600FC12E9;
+			remoteInfo = Quakes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0461E2FD246015C7004880B8 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		0461E2FF24601628004880B8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		04A59442245F08A50081FF68 /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
+		04A59445245F16C50081FF68 /* QuakeResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeResults.swift; sourceTree = "<group>"; };
+		04A59448245F21390081FF68 /* Quake+MKAnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quake+MKAnotation.swift"; sourceTree = "<group>"; };
+		04DC3E7F2465AE0300CFB3AF /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		04DC3E812466939300CFB3AF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		04DC3E83246823B900CFB3AF /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		04DD48262462ABFB00FEBFED /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3D2B26E322494EE4578EBCB6 /* Pods_Quakes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quakes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41832D6A80ADE9E2119211D /* Pods-QuakesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuakesTests.release.xcconfig"; path = "Target Support Files/Pods-QuakesTests/Pods-QuakesTests.release.xcconfig"; sourceTree = "<group>"; };
+		BD482516236B3B6600FC12E9 /* Quakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD482519236B3B6600FC12E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD48251B236B3B6600FC12E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BD482522236B3B6800FC12E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD482525236B3B6800FC12E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD482527236B3B6800FC12E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD48252C236B3B6800FC12E9 /* QuakesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuakesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD482530236B3B6800FC12E9 /* QuakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeTests.swift; sourceTree = "<group>"; };
+		BD482532236B3B6800FC12E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD48253B236B3BD500FC12E9 /* EarthquakesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthquakesViewController.swift; sourceTree = "<group>"; };
+		BD48253D236B3C4400FC12E9 /* Quake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Quake.json; sourceTree = "<group>"; };
+		BD48253E236B3C4400FC12E9 /* QuakeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeData.swift; sourceTree = "<group>"; };
+		BD482541236B3C4F00FC12E9 /* QuakeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeDetailView.swift; sourceTree = "<group>"; };
+		BD69304923F5DDAA00C0DF09 /* QuakeFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeFetcher.swift; sourceTree = "<group>"; };
+		BD6DDD1A23993CB100CA2A91 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D8B8DE9CAFD072C29138F57B /* Pods_QuakesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuakesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E038FFD49D33C59CF043534A /* Pods-Quakes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quakes.release.xcconfig"; path = "Target Support Files/Pods-Quakes/Pods-Quakes.release.xcconfig"; sourceTree = "<group>"; };
+		E919773AED5968F83660F67A /* Pods-QuakesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuakesTests.debug.xcconfig"; path = "Target Support Files/Pods-QuakesTests/Pods-QuakesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F039DDA6FD44481CE92F3F1B /* Pods-Quakes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quakes.debug.xcconfig"; path = "Target Support Files/Pods-Quakes/Pods-Quakes.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD482513236B3B6600FC12E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659F10BE819CEF6678C78292 /* Pods_Quakes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD482529236B3B6800FC12E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				662AF414BF2104C7E0743675 /* Pods_QuakesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04A5943D245F06440081FF68 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD48253B236B3BD500FC12E9 /* EarthquakesViewController.swift */,
+				0461E2FD246015C7004880B8 /* SearchTableViewController.swift */,
+				04DD48262462ABFB00FEBFED /* DetailViewController.swift */,
+				0461E2FF24601628004880B8 /* SettingsViewController.swift */,
+				04DC3E812466939300CFB3AF /* WebViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		04A5943E245F06610081FF68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD482541236B3C4F00FC12E9 /* QuakeDetailView.swift */,
+				04DC3E83246823B900CFB3AF /* GraphView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04A5943F245F06760081FF68 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BD69304923F5DDAA00C0DF09 /* QuakeFetcher.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		04A59440245F06880081FF68 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DDD1A23993CB100CA2A91 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		04A59441245F06A60081FF68 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD482519236B3B6600FC12E9 /* AppDelegate.swift */,
+				BD48251B236B3B6600FC12E9 /* SceneDelegate.swift */,
+				04DC3E7F2465AE0300CFB3AF /* Formatter.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04A59444245F08B10081FF68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04A59442245F08A50081FF68 /* Quake.swift */,
+				04A59448245F21390081FF68 /* Quake+MKAnotation.swift */,
+				04A59445245F16C50081FF68 /* QuakeResults.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		643246116873692267C237C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D2B26E322494EE4578EBCB6 /* Pods_Quakes.framework */,
+				D8B8DE9CAFD072C29138F57B /* Pods_QuakesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD48250D236B3B6600FC12E9 = {
+			isa = PBXGroup;
+			children = (
+				BD482518236B3B6600FC12E9 /* Quakes */,
+				BD48252F236B3B6800FC12E9 /* QuakesTests */,
+				BD482517236B3B6600FC12E9 /* Products */,
+				CBB550A767FBFFEB80900B90 /* Pods */,
+				643246116873692267C237C2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BD482517236B3B6600FC12E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD482516236B3B6600FC12E9 /* Quakes.app */,
+				BD48252C236B3B6800FC12E9 /* QuakesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD482518236B3B6600FC12E9 /* Quakes */ = {
+			isa = PBXGroup;
+			children = (
+				04A59441245F06A60081FF68 /* Resources */,
+				04A5943D245F06440081FF68 /* View Controller */,
+				04A5943E245F06610081FF68 /* Views */,
+				04A5943F245F06760081FF68 /* Network */,
+				04A59440245F06880081FF68 /* Storyboards */,
+				04A59444245F08B10081FF68 /* Model */,
+				BD482522236B3B6800FC12E9 /* Assets.xcassets */,
+				BD482524236B3B6800FC12E9 /* LaunchScreen.storyboard */,
+				BD482527236B3B6800FC12E9 /* Info.plist */,
+			);
+			path = Quakes;
+			sourceTree = "<group>";
+		};
+		BD48252F236B3B6800FC12E9 /* QuakesTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD482530236B3B6800FC12E9 /* QuakeTests.swift */,
+				BD48253D236B3C4400FC12E9 /* Quake.json */,
+				BD48253E236B3C4400FC12E9 /* QuakeData.swift */,
+				BD482532236B3B6800FC12E9 /* Info.plist */,
+			);
+			path = QuakesTests;
+			sourceTree = "<group>";
+		};
+		CBB550A767FBFFEB80900B90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F039DDA6FD44481CE92F3F1B /* Pods-Quakes.debug.xcconfig */,
+				E038FFD49D33C59CF043534A /* Pods-Quakes.release.xcconfig */,
+				E919773AED5968F83660F67A /* Pods-QuakesTests.debug.xcconfig */,
+				A41832D6A80ADE9E2119211D /* Pods-QuakesTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD482515236B3B6600FC12E9 /* Quakes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD482535236B3B6800FC12E9 /* Build configuration list for PBXNativeTarget "Quakes" */;
+			buildPhases = (
+				3FEC202010FB623E0F3009C4 /* [CP] Check Pods Manifest.lock */,
+				BD482512236B3B6600FC12E9 /* Sources */,
+				BD482513236B3B6600FC12E9 /* Frameworks */,
+				BD482514236B3B6600FC12E9 /* Resources */,
+				65F371795E878F1EB5973143 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Quakes;
+			productName = Quakes;
+			productReference = BD482516236B3B6600FC12E9 /* Quakes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD48252B236B3B6800FC12E9 /* QuakesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD482538236B3B6800FC12E9 /* Build configuration list for PBXNativeTarget "QuakesTests" */;
+			buildPhases = (
+				1EA49704A83639AD58D38A56 /* [CP] Check Pods Manifest.lock */,
+				BD482528236B3B6800FC12E9 /* Sources */,
+				BD482529236B3B6800FC12E9 /* Frameworks */,
+				BD48252A236B3B6800FC12E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD48252E236B3B6800FC12E9 /* PBXTargetDependency */,
+			);
+			name = QuakesTests;
+			productName = QuakesTests;
+			productReference = BD48252C236B3B6800FC12E9 /* QuakesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD48250E236B3B6600FC12E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Lambda, Inc";
+				TargetAttributes = {
+					BD482515236B3B6600FC12E9 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					BD48252B236B3B6800FC12E9 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = BD482515236B3B6600FC12E9;
+					};
+				};
+			};
+			buildConfigurationList = BD482511236B3B6600FC12E9 /* Build configuration list for PBXProject "Quakes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD48250D236B3B6600FC12E9;
+			productRefGroup = BD482517236B3B6600FC12E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD482515236B3B6600FC12E9 /* Quakes */,
+				BD48252B236B3B6800FC12E9 /* QuakesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD482514236B3B6600FC12E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6DDD1B23993CB100CA2A91 /* Main.storyboard in Resources */,
+				BD482526236B3B6800FC12E9 /* LaunchScreen.storyboard in Resources */,
+				BD482523236B3B6800FC12E9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD48252A236B3B6800FC12E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD48253F236B3C4400FC12E9 /* Quake.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EA49704A83639AD58D38A56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuakesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FEC202010FB623E0F3009C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quakes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65F371795E878F1EB5973143 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quakes/Pods-Quakes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quakes/Pods-Quakes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Quakes/Pods-Quakes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD482512236B3B6600FC12E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DD48272462ABFB00FEBFED /* DetailViewController.swift in Sources */,
+				04DC3E802465AE0300CFB3AF /* Formatter.swift in Sources */,
+				BD48251A236B3B6600FC12E9 /* AppDelegate.swift in Sources */,
+				04A59443245F08A50081FF68 /* Quake.swift in Sources */,
+				BD48253C236B3BD500FC12E9 /* EarthquakesViewController.swift in Sources */,
+				0461E30024601628004880B8 /* SettingsViewController.swift in Sources */,
+				04A59449245F21390081FF68 /* Quake+MKAnotation.swift in Sources */,
+				04A59447245F18CD0081FF68 /* QuakeFetcher.swift in Sources */,
+				0461E2FE246015C7004880B8 /* SearchTableViewController.swift in Sources */,
+				04DC3E84246823B900CFB3AF /* GraphView.swift in Sources */,
+				04A5944A245F4F480081FF68 /* QuakeDetailView.swift in Sources */,
+				04A59446245F16C60081FF68 /* QuakeResults.swift in Sources */,
+				04DC3E822466939300CFB3AF /* WebViewController.swift in Sources */,
+				BD48251C236B3B6600FC12E9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD482528236B3B6800FC12E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD482531236B3B6800FC12E9 /* QuakeTests.swift in Sources */,
+				BD482540236B3C4400FC12E9 /* QuakeData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD48252E236B3B6800FC12E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD482515236B3B6600FC12E9 /* Quakes */;
+			targetProxy = BD48252D236B3B6800FC12E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD482524236B3B6800FC12E9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD482525236B3B6800FC12E9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD482533236B3B6800FC12E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BD482534236B3B6800FC12E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD482536236B3B6800FC12E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F039DDA6FD44481CE92F3F1B /* Pods-Quakes.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3P8URX7UV;
+				INFOPLIST_FILE = Quakes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fritzgt.Quakes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD482537236B3B6800FC12E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E038FFD49D33C59CF043534A /* Pods-Quakes.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3P8URX7UV;
+				INFOPLIST_FILE = Quakes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaschool.Quakes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BD482539236B3B6800FC12E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E919773AED5968F83660F67A /* Pods-QuakesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
+				INFOPLIST_FILE = QuakesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaschool.QuakesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quakes.app/Quakes";
+			};
+			name = Debug;
+		};
+		BD48253A236B3B6800FC12E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41832D6A80ADE9E2119211D /* Pods-QuakesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
+				INFOPLIST_FILE = QuakesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaschool.QuakesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quakes.app/Quakes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD482511236B3B6600FC12E9 /* Build configuration list for PBXProject "Quakes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD482533236B3B6800FC12E9 /* Debug */,
+				BD482534236B3B6800FC12E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD482535236B3B6800FC12E9 /* Build configuration list for PBXNativeTarget "Quakes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD482536236B3B6800FC12E9 /* Debug */,
+				BD482537236B3B6800FC12E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD482538236B3B6800FC12E9 /* Build configuration list for PBXNativeTarget "QuakesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD482539236B3B6800FC12E9 /* Debug */,
+				BD48253A236B3B6800FC12E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD48250E236B3B6600FC12E9 /* Project object */;
+}

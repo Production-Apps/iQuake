@@ -1,0 +1,6 @@
+framework module Pods_Quakes {
+  umbrella header "Pods-Quakes-umbrella.h"
+
+  export *
+  module * { export * }
+}
