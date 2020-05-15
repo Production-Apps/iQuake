@@ -15,9 +15,11 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     //MARK: - Outlets
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var coodinatesLabel: UILabel!
     @IBOutlet weak var magnitudeLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet var latitudeLabel: UILabel!
+    @IBOutlet var longitudeLabel: UILabel!
+    @IBOutlet var depthLabel: UILabel!
     
     //MARK: - Properties
     var selectedQuake: Quake? {
@@ -48,10 +50,11 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
             let date = formatter.dateFormatter.string(from: quake.time)
             
             //placeLabel.text = quake.place
-            //navigationItem.title = quake.place
+            //placeLabel.text = quake.place
             dateLabel.text = date
-            navigationItem.title = "Depth: \(quake.depth) km"
-            //coodinatesLabel.text = " Lat: \(lat) Lon: \(lon)"
+            depthLabel.text = "\(quake.depth)km"
+            latitudeLabel.text = String(quake.latitude)
+            longitudeLabel.text = String(quake.longitude)
 
             if let magnitude = quake.magnitude {
                 magnitudeLabel.text = "\(magnitude)"
