@@ -13,35 +13,34 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let section = indexPath.section
+        let row = indexPath.row
+        
+        if section == 2 && row == 0 {
+            print("Dev website")
+        }else if section == 2 && row == 1 {
+            print("Dev USGS site")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "USGSSegue" {
+            guard let devVC = segue.destination as? WebViewController else {
+                return
+            }
+            devVC.urlString =  "https://fritzgt.com"
+        }else if segue.identifier == "DevSegue"{
+            guard let usgsVC = segue.destination as? WebViewController else {
+                        return
+                    }
+                    usgsVC.urlString =  "https://www.usgs.gov/about/about-us/who-we-are"
+        }
+    }
+    
 
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 3
-//    }
-
-//
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
-//
-////        if indexPath.row == 0{
-////            cell.textLabel?.text = "Use my location"
-////            //let settingSwitch = UISwitch()
-////            cell.accessoryType = .detailButton
-////        }else if indexPath.row == 1{
-////            cell.textLabel?.text = "Notifications"
-////             cell.detailTextLabel?.text = ""
-////        }else if indexPath.row == 2{
-////            cell.textLabel?.text = "About"
-////             cell.detailTextLabel?.text = ""
-////        }
-//
-//        return cell
-//    }
 }
