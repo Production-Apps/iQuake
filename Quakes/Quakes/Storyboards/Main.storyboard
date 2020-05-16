@@ -90,15 +90,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUK-XV-KSB">
-                                                    <rect key="frame" x="20" y="11" width="84" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11" width="84" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwI-ct-XYM">
-                                                    <rect key="frame" x="345" y="6" width="49" height="31"/>
+                                                    <rect key="frame" x="345" y="6" width="49" height="31.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="31" id="H9d-M0-Y32"/>
                                                         <constraint firstAttribute="width" constant="47" id="JL4-0x-xHB"/>
                                                     </constraints>
                                                 </switch>
@@ -121,16 +120,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Kilometers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScS-cl-a8j">
-                                                    <rect key="frame" x="20" y="11" width="116" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11" width="116" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFo-EH-51D">
-                                                    <rect key="frame" x="345" y="6" width="49" height="31"/>
+                                                    <rect key="frame" x="345" y="6" width="49" height="31.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="47" id="Toc-VW-NuW"/>
-                                                        <constraint firstAttribute="height" constant="31" id="Unc-Di-CF7"/>
                                                     </constraints>
                                                 </switch>
                                             </subviews>
@@ -156,15 +154,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use my Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3l-CH-Hp8">
-                                                    <rect key="frame" x="20" y="11" width="128" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11" width="128" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7M-Af-aGm">
-                                                    <rect key="frame" x="345" y="6" width="49" height="31"/>
+                                                    <rect key="frame" x="345" y="6" width="49" height="31.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="31" id="3DE-Oy-tyU"/>
                                                         <constraint firstAttribute="width" constant="47" id="6j4-9I-Szb"/>
                                                     </constraints>
                                                 </switch>
@@ -187,15 +184,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2N-8p-PLm">
-                                                    <rect key="frame" x="20" y="11" width="84.5" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11" width="84.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-yC-g3P">
-                                                    <rect key="frame" x="152" y="7" width="242" height="30"/>
+                                                    <rect key="frame" x="152" y="7" width="242" height="30.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="29" id="T6A-5L-XD3"/>
                                                         <constraint firstAttribute="width" constant="238" id="o2N-Hy-KrY"/>
                                                     </constraints>
                                                 </slider>
@@ -218,16 +214,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbF-Rd-fOS">
-                                                    <rect key="frame" x="20" y="11" width="97" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11" width="97" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxX-Ia-QiV">
-                                                    <rect key="frame" x="345" y="6" width="49" height="31"/>
+                                                    <rect key="frame" x="345" y="6" width="49" height="31.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="47" id="fvl-zB-RGf"/>
-                                                        <constraint firstAttribute="height" constant="31" id="w8W-bx-vlX"/>
                                                     </constraints>
                                                 </switch>
                                             </subviews>

@@ -29,12 +29,12 @@ class SettingsTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "USGSSegue" {
+        if segue.identifier == "DevSegue" {
             guard let devVC = segue.destination as? WebViewController else {
                 return
             }
             devVC.urlString =  "https://fritzgt.com"
-        }else if segue.identifier == "DevSegue"{
+        }else if segue.identifier == "USGSSegue"{
             guard let usgsVC = segue.destination as? WebViewController else {
                         return
                     }
