@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044FAE9E246FD9AF00DDDA43 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FAE9D246FD9AF00DDDA43 /* SettingsTableViewController.swift */; };
 		0461E2FE246015C7004880B8 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461E2FD246015C7004880B8 /* SearchTableViewController.swift */; };
-		0461E30024601628004880B8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461E2FF24601628004880B8 /* SettingsViewController.swift */; };
 		04A59443245F08A50081FF68 /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59442245F08A50081FF68 /* Quake.swift */; };
 		04A59446245F16C60081FF68 /* QuakeResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59445245F16C50081FF68 /* QuakeResults.swift */; };
 		04A59447245F18CD0081FF68 /* QuakeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69304923F5DDAA00C0DF09 /* QuakeFetcher.swift */; };
@@ -42,8 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044FAE9D246FD9AF00DDDA43 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		0461E2FD246015C7004880B8 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
-		0461E2FF24601628004880B8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		04A59442245F08A50081FF68 /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
 		04A59445245F16C50081FF68 /* QuakeResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeResults.swift; sourceTree = "<group>"; };
 		04A59448245F21390081FF68 /* Quake+MKAnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quake+MKAnotation.swift"; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 				BD48253B236B3BD500FC12E9 /* EarthquakesViewController.swift */,
 				0461E2FD246015C7004880B8 /* SearchTableViewController.swift */,
 				04DD48262462ABFB00FEBFED /* DetailViewController.swift */,
-				0461E2FF24601628004880B8 /* SettingsViewController.swift */,
 				04DC3E812466939300CFB3AF /* WebViewController.swift */,
+				044FAE9D246FD9AF00DDDA43 /* SettingsTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -392,8 +392,8 @@
 				BD48251A236B3B6600FC12E9 /* AppDelegate.swift in Sources */,
 				04A59443245F08A50081FF68 /* Quake.swift in Sources */,
 				BD48253C236B3BD500FC12E9 /* EarthquakesViewController.swift in Sources */,
-				0461E30024601628004880B8 /* SettingsViewController.swift in Sources */,
 				04A59449245F21390081FF68 /* Quake+MKAnotation.swift in Sources */,
+				044FAE9E246FD9AF00DDDA43 /* SettingsTableViewController.swift in Sources */,
 				04A59447245F18CD0081FF68 /* QuakeFetcher.swift in Sources */,
 				0461E2FE246015C7004880B8 /* SearchTableViewController.swift in Sources */,
 				04DC3E84246823B900CFB3AF /* GraphView.swift in Sources */,
