@@ -49,10 +49,9 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
             
             let date = formatter.dateFormatter.string(from: quake.time)
             
-            //placeLabel.text = quake.place
-            //placeLabel.text = quake.place
+            placeLabel.text = quake.place
             dateLabel.text = date
-            depthLabel.text = "\(quake.depth)km"
+            depthLabel.text = String(quake.depth)
             latitudeLabel.text = String(quake.latitude)
             longitudeLabel.text = String(quake.longitude)
 
