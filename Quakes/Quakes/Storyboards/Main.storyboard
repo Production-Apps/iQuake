@@ -240,11 +240,11 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="About" id="sEe-gH-cqo">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingsCell" id="ope-h8-DvG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="SettingsCell" id="ope-h8-DvG">
                                         <rect key="frame" x="0.0" y="357.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ope-h8-DvG" id="ie3-zA-M6H">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="351" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bq-40-MQ8">
@@ -264,15 +264,15 @@
                                             <segue destination="nbP-lR-PcO" kind="show" identifier="DevSegue" id="VGo-ER-AgM"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingsCell" id="McZ-2O-sOO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="SettingsCell" id="McZ-2O-sOO">
                                         <rect key="frame" x="0.0" y="401" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="McZ-2O-sOO" id="riI-rt-cUp">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="351" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USGS website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYL-XO-1xK">
-                                                    <rect key="frame" x="20" y="11" width="109" height="21.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data provided by: USGS " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYL-XO-1xK">
+                                                    <rect key="frame" x="20" y="11" width="189.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -392,10 +392,10 @@
                                         <rect key="frame" x="0.0" y="323" width="414" height="485"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="OVS-Ja-tXd">
-                                                <rect key="frame" x="74.5" y="16" width="265" height="389"/>
+                                                <rect key="frame" x="16" y="16" width="382" height="389"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Es7-CF-wau">
-                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="117.5"/>
+                                                        <rect key="frame" x="58.5" y="0.0" width="265" height="117.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wCU-38-iS9">
                                                                 <rect key="frame" x="0.0" y="15.5" width="113" height="86.5"/>
@@ -434,7 +434,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SwL-tq-XRW">
-                                                        <rect key="frame" x="28.5" y="167.5" width="208.5" height="221.5"/>
+                                                        <rect key="frame" x="87" y="167.5" width="208.5" height="221.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-Nt-1px">
                                                                 <rect key="frame" x="0.0" y="0.0" width="208.5" height="53"/>
@@ -445,7 +445,7 @@
                                                                         <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Los Angeles, California " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JE4-EU-uJv">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Los Angeles, California " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JE4-EU-uJv">
                                                                         <rect key="frame" x="0.0" y="29" width="208.5" height="24"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -516,6 +516,8 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.3411764705882353" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="OVS-Ja-tXd" firstAttribute="leading" secondItem="EQu-Db-X4Z" secondAttribute="leading" constant="16" id="0pv-aH-4f2"/>
+                                            <constraint firstAttribute="trailing" secondItem="OVS-Ja-tXd" secondAttribute="trailing" constant="16" id="5ru-bV-T0R"/>
                                             <constraint firstItem="OVS-Ja-tXd" firstAttribute="top" secondItem="EQu-Db-X4Z" secondAttribute="top" constant="16" id="G3Z-AJ-oh1"/>
                                             <constraint firstAttribute="bottom" secondItem="OVS-Ja-tXd" secondAttribute="bottom" constant="80" id="l4x-E1-hQJ"/>
                                             <constraint firstItem="OVS-Ja-tXd" firstAttribute="centerX" secondItem="EQu-Db-X4Z" secondAttribute="centerX" id="n9Q-8V-qM0"/>
@@ -623,7 +625,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VGo-ER-AgM"/>
+        <segue reference="7EV-NS-dh8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="clear.fill" catalog="system" width="128" height="114"/>
