@@ -43,7 +43,7 @@ class EarthquakesViewController: UIViewController {
     
     private func fetchQuakes()  {
         quakeFetcher.fetchQuakes { (quakes, error) in
-            if let error = error{
+            if let error = error {
                 print("Error fetching quakes: \(error)")
                 return
             }

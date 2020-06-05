@@ -59,9 +59,9 @@ class QuakeFetcher {
             completion(nil, QuakeError.invalidURL)
             return
         }
-        print(url)
+        //print(url)
         
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print("Error fetching quakes: \(error)")
                 DispatchQueue.main.async {
@@ -69,6 +69,14 @@ class QuakeFetcher {
                 }
                 return
             }
+            //TODO: FIx to look for error  -1009
+            //Handle responses
+            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else{
+                
+                return
+            }
+            
+//            if httpResponse.statusCode ==
             
             guard let data = data else {
                 print("No data")

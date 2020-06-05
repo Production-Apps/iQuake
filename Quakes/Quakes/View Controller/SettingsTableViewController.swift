@@ -24,7 +24,7 @@ class SettingsTableViewController: UITableViewController {
         if section == 2 && row == 0 {
             print("Dev website")
         }else if section == 2 && row == 1 {
-            print("Dev USGS site")
+            print("Powered by USGS")
         }
     }
     
