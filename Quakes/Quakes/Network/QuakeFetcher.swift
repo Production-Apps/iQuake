@@ -15,6 +15,13 @@ enum QuakeError: Int, Error {
     case decodeError
 }
 
+enum NetworkError: Error {
+    case noAuth
+    case badAuth
+    case otherError
+    case noInternet
+}
+
 class QuakeFetcher {
     let baseURL = URL(string: "https://earthquake.usgs.gov/fdsnws/event/1/query")!
     let dateFormatter = ISO8601DateFormatter()
@@ -39,7 +46,6 @@ class QuakeFetcher {
     func fetchQuakes(from dateInterval: DateInterval,
                      completion: @escaping ([Quake]?, Error?) -> Void) {
         
-        
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         
         // startTime, endTime, format
@@ -62,21 +68,27 @@ class QuakeFetcher {
         //print(url)
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print("Error fetching quakes: \(error)")
-                DispatchQueue.main.async {
-                    completion(nil, error)
-                }
-                return
-            }
+            
+            
             //TODO: FIx to look for error  -1009
             //Handle responses
-            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else{
-                
+            if let httpResponse = response as? HTTPURLResponse{
+                print("No internet!\(httpResponse.statusCode)")
+                completion(nil,NetworkError.noInternet)
                 return
             }
             
-//            if httpResponse.statusCode ==
+
+            
+            //Error handling
+            if let error = error {
+                //print("Error fetching quakes: \(error)")
+                DispatchQueue.main.async {
+                    completion(nil, NetworkError.otherError)
+                }
+                return
+            }
+
             
             guard let data = data else {
                 print("No data")

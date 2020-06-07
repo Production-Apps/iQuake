@@ -21,7 +21,6 @@ class EarthquakesViewController: UIViewController {
     //MARK: - Outlets
     
     @IBOutlet var mapView: MKMapView!
-    
     @IBOutlet weak var searchButton: UIBarButtonItem!
     
     //MARK: - View Lifecycle
@@ -29,13 +28,12 @@ class EarthquakesViewController: UIViewController {
         super.viewDidLoad()
         
         searchButton.isEnabled = false
-        
         mapView.delegate = self
         
+        fetchQuakes()
         //Create a reusable cell
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "QuakeView")
         
-        fetchQuakes()
         
     }
     
@@ -69,6 +67,8 @@ class EarthquakesViewController: UIViewController {
         if let currentLocation = self.locationManager.location?.coordinate {
             
             self.locateOnMap(for: currentLocation)
+        }else{ //TODO: Create alert derecting user to location services
+            print("No location available!")
         }
     }
     
