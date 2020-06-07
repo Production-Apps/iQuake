@@ -58,18 +58,38 @@ class EarthquakesViewController: UIViewController {
         }
     }
     
-    private func currentLocation() {
+    private func currentLocation(manualRequest:Bool = false) {
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.startUpdatingLocation()
         
         if let currentLocation = self.locationManager.location?.coordinate {
-            
             self.locateOnMap(for: currentLocation)
-        }else{ //TODO: Create alert derecting user to location services
-            print("No location available!")
+        }else{
+            if manualRequest{
+                locationAlert()
+            }
         }
+    }
+    
+    private func locationAlert() {
+        let alertController = UIAlertController.init(title: "Current location not available",message: "GPS access is restricted. In order to use tracking, please enable GPS in the Settigs app under Privacy, Location Services.", preferredStyle: .alert)
+        let settingsAction = UIAlertAction(title: "Go to settings", style: .default) { (action) in
+            
+            guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {return}
+            if UIApplication.shared.canOpenURL(settingsURL){
+                
+                UIApplication.shared.open(settingsURL, completionHandler: nil)
+            }
+        }
+        let canceAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(settingsAction)
+        alertController.addAction(canceAction)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
     }
     
     private func locateOnMap(for location: CLLocationCoordinate2D) {
@@ -117,7 +137,7 @@ class EarthquakesViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func currentLocationButtonPressed(_ sender: UIButton) {
-        currentLocation()
+        currentLocation(manualRequest: true)
     }
     
     @IBAction func dismissViewButtonPressed(_ sender: UIButton) {
