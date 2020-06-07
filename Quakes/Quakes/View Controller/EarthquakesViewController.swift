@@ -22,6 +22,8 @@ class EarthquakesViewController: UIViewController {
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet weak var searchButton: UIBarButtonItem!
+    @IBOutlet weak var locationArrowLabel: UIButton!
+    
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -34,7 +36,7 @@ class EarthquakesViewController: UIViewController {
         //Create a reusable cell
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "QuakeView")
         
-        
+        locationArrowLabel.layer.cornerRadius = 5
     }
     
     //MARK: - Setup Methods

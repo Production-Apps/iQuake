@@ -71,7 +71,7 @@ class QuakeFetcher {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             
-            //TODO: FIx to look for error  -1009
+            //TODO: Fix to look for error  -1009
             //Handle responses
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
                 completion(nil, NetworkError.noInternet)
@@ -94,7 +94,6 @@ class QuakeFetcher {
             }
                         
             do {
-                // TODO: Implement decoding and completion call
                 let decoder = JSONDecoder()
                 //Setup date
                 decoder.dateDecodingStrategy = .millisecondsSince1970
