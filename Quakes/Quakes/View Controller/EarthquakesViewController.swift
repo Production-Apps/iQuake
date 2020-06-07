@@ -72,6 +72,7 @@ class EarthquakesViewController: UIViewController {
         
         if let currentLocation = self.locationManager.location?.coordinate {
             self.locateOnMap(for: currentLocation)
+            locationManager.stopUpdatingLocation()
         }else{
             if manualRequest{
                 locationAlert()
