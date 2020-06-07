@@ -8,6 +8,7 @@
 
 import Foundation
 
+//MARK: - Error handling Enums
 enum QuakeError: Int, Error {
     case invalidURL
     case noDataReturned
@@ -22,10 +23,15 @@ enum NetworkError: Error {
     case noInternet
 }
 
+//MARK: - Fetch data
 class QuakeFetcher {
+    
+    //MARK: - Properties
     let baseURL = URL(string: "https://earthquake.usgs.gov/fdsnws/event/1/query")!
     let dateFormatter = ISO8601DateFormatter()
     
+    
+    //MARK: - Fetch methods
     func fetchQuakes(completion: @escaping ([Quake]?, Error?) -> Void) {
         
         let endDate = Date()

@@ -11,9 +11,10 @@ import WebKit
 
 class WebViewController: UIViewController, WKUIDelegate {
     
-    
+    //MARK: - Outlets
     @IBOutlet var webView: WKWebView!
     
+    //MARK: - Properties
     var urlString: String?{
         didSet{
             if let urlFormat = urlString {
@@ -25,22 +26,22 @@ class WebViewController: UIViewController, WKUIDelegate {
     
     var url: URL?
     
+    //MARK: - View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUp()
     }
     
-    
+    //MARK: - Actions
     @IBAction func openSafaryButtonPressed(_ sender: UIBarButtonItem) {
         if let url = url {
            UIApplication.shared.open(url)
         }
     }
-    
- 
-    
-    func setUp() {
+
+    //MARK: - Private func
+    private func setUp() {
         if let url = url{
             let myRequest = URLRequest(url: url)
             webView.load(myRequest)

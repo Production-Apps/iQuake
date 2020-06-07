@@ -10,12 +10,13 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
+    //MARK: - View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
-    
+    //MARK: - TableView methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let section = indexPath.section
@@ -28,6 +29,7 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
+    //MARK: - Prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DevSegue" {
             guard let devVC = segue.destination as? WebViewController else {
@@ -42,5 +44,4 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
-
 }

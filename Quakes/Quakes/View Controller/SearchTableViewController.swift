@@ -154,7 +154,6 @@ class SearchTableViewController: UITableViewController {
         sortResults()
     }
     
-    
 }
 
 //MARK: - UISearchBarDelegate
