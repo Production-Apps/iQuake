@@ -46,6 +46,7 @@ class QuakeFetcher {
     func fetchQuakes(from dateInterval: DateInterval,
                      completion: @escaping ([Quake]?, Error?) -> Void) {
         
+        
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         
         // startTime, endTime, format
@@ -72,20 +73,14 @@ class QuakeFetcher {
             
             //TODO: FIx to look for error  -1009
             //Handle responses
-            if let httpResponse = response as? HTTPURLResponse{
-                print("No internet!\(httpResponse.statusCode)")
-                completion(nil,NetworkError.noInternet)
+            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                completion(nil, NetworkError.noInternet)
                 return
             }
-            
-
-            
+        
             //Error handling
             if let error = error {
-                //print("Error fetching quakes: \(error)")
-                DispatchQueue.main.async {
-                    completion(nil, NetworkError.otherError)
-                }
+                    completion(nil, error)
                 return
             }
 
