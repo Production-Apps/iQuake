@@ -29,17 +29,21 @@ class EarthquakesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchButton.isEnabled = false
+        setupUI()
+        
         mapView.delegate = self
         
         fetchQuakes()
+        
         //Create a reusable cell
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "QuakeView")
-        
-        locationArrowLabel.layer.cornerRadius = 5
     }
     
     //MARK: - Setup Methods
+    private func setupUI(){
+        searchButton.isEnabled = false
+        locationArrowLabel.layer.cornerRadius = 5
+    }
     
     private func fetchQuakes()  {
         quakeFetcher.fetchQuakes { (quakes, error) in
@@ -159,6 +163,7 @@ class EarthquakesViewController: UIViewController {
         }
     }
 }
+
 //MARK: - MKMapViewDelegate
 
 extension EarthquakesViewController: MKMapViewDelegate {
