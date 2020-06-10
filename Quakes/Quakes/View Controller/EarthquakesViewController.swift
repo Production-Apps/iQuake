@@ -82,7 +82,7 @@ class EarthquakesViewController: UIViewController {
     }
     
     private func locationAlert() {
-        let alertController = UIAlertController.init(title: "Current location not available",message: "GPS access is restricted. In order to use tracking, please enable GPS in the Settigs app under Privacy, Location Services.", preferredStyle: .alert)
+        let alertController = UIAlertController.init(title: "Location not available",message: "GPS access is restricted. In order to use your location, please enable GPS in the Settigs app under Privacy, Location Services.", preferredStyle: .alert)
         let settingsAction = UIAlertAction(title: "Go to settings", style: .default) { (action) in
             
             guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {return}
@@ -101,8 +101,8 @@ class EarthquakesViewController: UIViewController {
     }
     
     private func networkAlert() {
-        let alertController = UIAlertController(title: "Network error", message: "Sorry something went wrong, please try again later...", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let alertController = UIAlertController(title: "Network error", message: "The internet connection appears to be offline.", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(alertAction)
         
         DispatchQueue.main.async {
