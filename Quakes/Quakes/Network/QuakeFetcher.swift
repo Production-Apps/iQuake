@@ -79,11 +79,12 @@ class QuakeFetcher {
             
             //TODO: Fix to look for error  -1009
             //Handle responses
+
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
                 completion(nil, NetworkError.noInternet)
                 return
             }
-        
+            
             //Error handling
             if let error = error {
                     completion(nil, error)

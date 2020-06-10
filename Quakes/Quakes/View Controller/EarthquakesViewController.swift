@@ -49,6 +49,7 @@ class EarthquakesViewController: UIViewController {
         quakeFetcher.fetchQuakes { (quakes, error) in
             if let error = error {
                 print("Error fetching quakes: \(error)")
+                self.networkAlert()
                 return
             }
             
@@ -97,6 +98,16 @@ class EarthquakesViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         
+    }
+    
+    private func networkAlert() {
+        let alertController = UIAlertController(title: "Network error", message: "Sorry something went wrong, please try again later...", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     private func locateOnMap(for location: CLLocationCoordinate2D) {
