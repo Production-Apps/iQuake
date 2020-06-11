@@ -10,6 +10,11 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
     
+    
+    //MARK: - Properties
+    private let defaults = UserDefaults.standard
+    
+    
     //MARK: - Outlets
     @IBOutlet weak var zoomSileder: UISlider!
     @IBOutlet weak var kmSwitch: UISwitch!
@@ -26,23 +31,23 @@ class SettingsTableViewController: UITableViewController {
     //MARK: - Setup UI
     
     private func updateSettings(){
-        //TODO: Read user preferences to set preferences
-        //zoomSileder.value =
+        kmSwitch.isOn = defaults.bool(forKey: "KMPref")
+        zoomSileder.value = defaults.float(forKey: "LocationZoom")
+        locationSwitch.isOn = defaults.bool(forKey: "LocationPref")
     }
     
     //MARK: - Actions
     
     @IBAction func kmSwitchTap(_ sender: UISwitch) {
-        print(sender.isOn)
+        defaults.set(sender.isOn, forKey: "KMPref")
     }
     
-    
     @IBAction func zoomSliderMoved(_ sender: UISlider) {
-        print(sender.value)
+        defaults.set(sender.value, forKey: "LocationZoom")
     }
     
     @IBAction func locationSwitchTap(_ sender: UISwitch) {
-        print(sender.isOn)
+        defaults.set(sender.isOn, forKey: "LocationPref")
     }
     
     //MARK: - Prepare
