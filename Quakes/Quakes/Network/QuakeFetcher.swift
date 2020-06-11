@@ -30,7 +30,6 @@ class QuakeFetcher {
     let baseURL = URL(string: "https://earthquake.usgs.gov/fdsnws/event/1/query")!
     let dateFormatter = ISO8601DateFormatter()
     
-    
     //MARK: - Fetch methods
     func fetchQuakes(completion: @escaping ([Quake]?, Error?) -> Void) {
         

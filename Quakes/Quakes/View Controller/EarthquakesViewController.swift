@@ -39,7 +39,7 @@ class EarthquakesViewController: UIViewController {
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "QuakeView")
     }
     
-    //MARK: - Setup Methods
+    //MARK: - Private Methods
     private func setupUI(){
         searchButton.isEnabled = false
         locationArrowLabel.layer.cornerRadius = 5
@@ -82,8 +82,8 @@ class EarthquakesViewController: UIViewController {
     }
     
     private func locationAlert() {
-        let alertController = UIAlertController.init(title: "Location not available",message: "GPS access is restricted. In order to use your location, please enable GPS in the Settigs app under Privacy, Location Services.", preferredStyle: .alert)
-        let settingsAction = UIAlertAction(title: "Go to settings", style: .default) { (action) in
+        let alertController = UIAlertController.init(title: "Location not available.",message: "GPS access is restricted. In order to use your location, please enable GPS in the Settigs app under Privacy, Location Services.", preferredStyle: .alert)
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (action) in
             
             guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {return}
             if UIApplication.shared.canOpenURL(settingsURL){

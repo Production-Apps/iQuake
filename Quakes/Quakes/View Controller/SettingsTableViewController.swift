@@ -9,24 +9,40 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
+    
+    //MARK: - Outlets
+    @IBOutlet weak var zoomSileder: UISlider!
+    @IBOutlet weak var kmSwitch: UISwitch!
+    @IBOutlet weak var locationSwitch: UISwitch!
+    
 
     //MARK: - View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        updateSettings()
     }
-
-    //MARK: - TableView methods
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let section = indexPath.section
-        let row = indexPath.row
-        
-        if section == 2 && row == 0 {
-            print("Dev website")
-        }else if section == 2 && row == 1 {
-            print("Powered by USGS")
-        }
+    
+    //MARK: - Setup UI
+    
+    private func updateSettings(){
+        //TODO: Read user preferences to set preferences
+        //zoomSileder.value =
+    }
+    
+    //MARK: - Actions
+    
+    @IBAction func kmSwitchTap(_ sender: UISwitch) {
+        print(sender.isOn)
+    }
+    
+    
+    @IBAction func zoomSliderMoved(_ sender: UISlider) {
+        print(sender.value)
+    }
+    
+    @IBAction func locationSwitchTap(_ sender: UISwitch) {
+        print(sender.isOn)
     }
     
     //MARK: - Prepare
