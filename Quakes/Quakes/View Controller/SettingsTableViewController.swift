@@ -24,7 +24,6 @@ class SettingsTableViewController: UITableViewController {
     //MARK: - View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateSettings()
     }
     
@@ -32,7 +31,7 @@ class SettingsTableViewController: UITableViewController {
     
     private func updateSettings(){
         kmSwitch.isOn = defaults.bool(forKey: "KMPref")
-        zoomSileder.value = defaults.float(forKey: "LocationZoom")
+        zoomSileder.value = defaults.float(forKey: "LocationZoom") / 10
         locationSwitch.isOn = defaults.bool(forKey: "LocationPref")
     }
     
@@ -43,7 +42,10 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func zoomSliderMoved(_ sender: UISlider) {
-        defaults.set(sender.value, forKey: "LocationZoom")
+        
+        let value = round(sender.value) * 10
+        
+        defaults.set(value, forKey: "LocationZoom")
     }
     
     @IBAction func locationSwitchTap(_ sender: UISwitch) {

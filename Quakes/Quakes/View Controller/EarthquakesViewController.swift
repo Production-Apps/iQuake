@@ -17,13 +17,13 @@ class EarthquakesViewController: UIViewController {
     private var quakesArray: [Quake]?
     private var selectedAnnotation: Quake?
     private var detailView = QuakeDetailView()
+    private let defaults = UserDefaults.standard
     
     //MARK: - Outlets
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var locationArrowLabel: UIButton!
-    
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -40,9 +40,39 @@ class EarthquakesViewController: UIViewController {
     }
     
     //MARK: - Private Methods
+    
     private func setupUI(){
         searchButton.isEnabled = false
         locationArrowLabel.layer.cornerRadius = 5
+    }
+    
+    private func locationAlert() {
+        let alertController = UIAlertController.init(title: "Location not available.",message: "GPS access is restricted. In order to use your location, please enable GPS in the Settigs app under Privacy, Location Services.", preferredStyle: .alert)
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (action) in
+            
+            guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {return}
+            if UIApplication.shared.canOpenURL(settingsURL){
+                
+                UIApplication.shared.open(settingsURL, completionHandler: nil)
+            }
+        }
+        let canceAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(settingsAction)
+        alertController.addAction(canceAction)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+    }
+    
+    private func networkAlert() {
+        let alertController = UIAlertController(title: "Network error", message: "The internet connection appears to be offline.", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     private func fetchQuakes()  {
@@ -81,38 +111,11 @@ class EarthquakesViewController: UIViewController {
         }
     }
     
-    private func locationAlert() {
-        let alertController = UIAlertController.init(title: "Location not available.",message: "GPS access is restricted. In order to use your location, please enable GPS in the Settigs app under Privacy, Location Services.", preferredStyle: .alert)
-        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (action) in
-            
-            guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {return}
-            if UIApplication.shared.canOpenURL(settingsURL){
-                
-                UIApplication.shared.open(settingsURL, completionHandler: nil)
-            }
-        }
-        let canceAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alertController.addAction(settingsAction)
-        alertController.addAction(canceAction)
-        DispatchQueue.main.async {
-            self.present(alertController, animated: true, completion: nil)
-        }
-        
-    }
-    
-    private func networkAlert() {
-        let alertController = UIAlertController(title: "Network error", message: "The internet connection appears to be offline.", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(alertAction)
-        
-        DispatchQueue.main.async {
-            self.present(alertController, animated: true, completion: nil)
-        }
-    }
-    
     private func locateOnMap(for location: CLLocationCoordinate2D) {
         
-        let coordinateSpan = MKCoordinateSpan(latitudeDelta: 50, longitudeDelta: 50)
+        let userPrefZoom = CLLocationDegrees(defaults.float(forKey: "LocationZoom"))
+        
+        let coordinateSpan = MKCoordinateSpan(latitudeDelta: userPrefZoom, longitudeDelta: userPrefZoom)
         
         let coordinateRegion = MKCoordinateRegion(center: location, span: coordinateSpan)
         
