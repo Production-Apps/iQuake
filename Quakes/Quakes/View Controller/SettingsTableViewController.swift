@@ -30,15 +30,15 @@ class SettingsTableViewController: UITableViewController {
     //MARK: - Setup UI
     
     private func updateSettings(){
-        kmSwitch.isOn = defaults.bool(forKey: "KMPref")
+        kmSwitch.isOn = defaults.bool(forKey: "LightQuakesPref")
         zoomSileder.value = defaults.float(forKey: "LocationZoom") / 10
         locationSwitch.isOn = defaults.bool(forKey: "LocationPref")
     }
     
     //MARK: - Actions
     
-    @IBAction func kmSwitchTap(_ sender: UISwitch) {
-        defaults.set(sender.isOn, forKey: "KMPref")
+    @IBAction func lightQuakesTap(_ sender: UISwitch) {
+        defaults.set(sender.isOn, forKey: "LightQuakesPref")
     }
     
     @IBAction func zoomSliderMoved(_ sender: UISlider) {
@@ -64,7 +64,18 @@ class SettingsTableViewController: UITableViewController {
                         return
                     }
                     usgsVC.urlString =  "https://www.usgs.gov/about/about-us/who-we-are"
+        }else if segue.identifier == "FaqSegue"{
+            guard let usgsVC = segue.destination as? WebViewController else {
+                        return
+                    }
+                    usgsVC.urlString =  "https://www.usgs.gov/natural-hazards/earthquake-hazards/faqs-category"
+        }else if segue.identifier == "PrepareSegue"{
+            guard let usgsVC = segue.destination as? WebViewController else {
+                        return
+                    }
+                    usgsVC.urlString =  "https://www.usgs.gov/natural-hazards/earthquake-hazards/science/prepare?qt-science_center_objects=0#qt-science_center_objects"
         }
+        
     }
     
 }

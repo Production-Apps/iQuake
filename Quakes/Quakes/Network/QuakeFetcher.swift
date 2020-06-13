@@ -29,6 +29,7 @@ class QuakeFetcher {
     //MARK: - Properties
     let baseURL = URL(string: "https://earthquake.usgs.gov/fdsnws/event/1/query")!
     let dateFormatter = ISO8601DateFormatter()
+    let defaults = UserDefaults.standard
     
     //MARK: - Fetch methods
     func fetchQuakes(completion: @escaping ([Quake]?, Error?) -> Void) {
@@ -58,10 +59,20 @@ class QuakeFetcher {
         let startTime = dateFormatter.string(from: dateInterval.start)
         let endTime = dateFormatter.string(from: dateInterval.end)
         
+        let lightQUakes = defaults.bool(forKey: "LightQuakesPref")
+        var showLightQuakes: String {
+            if lightQUakes {
+                return "4"
+            }else{
+                return "0"
+            }
+        }
+        
         let queryItems = [
             URLQueryItem(name: "starttime", value: startTime),
             URLQueryItem(name: "endtime", value: endTime),
             URLQueryItem(name: "format", value: "geojson"),
+            URLQueryItem(name: "minmagnitude", value: showLightQuakes)
         ]
         
         urlComponents?.queryItems = queryItems
@@ -71,13 +82,9 @@ class QuakeFetcher {
             completion(nil, QuakeError.invalidURL)
             return
         }
-        //print(url)
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             
-            
-            //TODO: Fix to look for error  -1009
-            //Handle responses
 
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
                 completion(nil, NetworkError.noInternet)
@@ -92,7 +99,7 @@ class QuakeFetcher {
 
             
             guard let data = data else {
-                print("No data")
+
                 DispatchQueue.main.async {
                     completion(nil, QuakeError.noDataReturned)
                 }
@@ -106,7 +113,6 @@ class QuakeFetcher {
                 let quakeResults = try decoder.decode(QuakeResults.self, from: data)
                 completion(quakeResults.quakes, nil)
             } catch {
-                print("Decoding error: \(error)")
                 DispatchQueue.main.async {
                     completion(nil, error)
                 }

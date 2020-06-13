@@ -12,8 +12,8 @@ import MapKit
 class EarthquakesViewController: UIViewController {
     
     //MARK: - Properties
-    private var quakeFetcher = QuakeFetcher()
     fileprivate let locationManager: CLLocationManager = CLLocationManager()
+    private var quakeFetcher = QuakeFetcher()
     private var quakesArray: [Quake]?
     private var selectedAnnotation: Quake?
     private var detailView = QuakeDetailView()
@@ -77,13 +77,13 @@ class EarthquakesViewController: UIViewController {
     
     private func fetchQuakes()  {
         quakeFetcher.fetchQuakes { (quakes, error) in
-            if let error = error {
-                print("Error fetching quakes: \(error)")
+            if let _ = error {
                 self.networkAlert()
                 return
             }
             
             guard let quakes = quakes else { return }
+            
             self.quakesArray = quakes
             
             DispatchQueue.main.async {
