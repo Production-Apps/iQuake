@@ -16,7 +16,6 @@
 		04A5944A245F4F480081FF68 /* QuakeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482541236B3C4F00FC12E9 /* QuakeDetailView.swift */; };
 		04DC3E802465AE0300CFB3AF /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3E7F2465AE0300CFB3AF /* Formatter.swift */; };
 		04DC3E822466939300CFB3AF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3E812466939300CFB3AF /* WebViewController.swift */; };
-		04DC3E84246823B900CFB3AF /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3E83246823B900CFB3AF /* GraphView.swift */; };
 		04DD48272462ABFB00FEBFED /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD48262462ABFB00FEBFED /* DetailViewController.swift */; };
 		659F10BE819CEF6678C78292 /* Pods_Quakes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B26E322494EE4578EBCB6 /* Pods_Quakes.framework */; };
 		662AF414BF2104C7E0743675 /* Pods_QuakesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B8DE9CAFD072C29138F57B /* Pods_QuakesTests.framework */; };
@@ -49,7 +48,6 @@
 		04A59448245F21390081FF68 /* Quake+MKAnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quake+MKAnotation.swift"; sourceTree = "<group>"; };
 		04DC3E7F2465AE0300CFB3AF /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		04DC3E812466939300CFB3AF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		04DC3E83246823B900CFB3AF /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		04DD48262462ABFB00FEBFED /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3D2B26E322494EE4578EBCB6 /* Pods_Quakes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quakes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41832D6A80ADE9E2119211D /* Pods-QuakesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuakesTests.release.xcconfig"; path = "Target Support Files/Pods-QuakesTests/Pods-QuakesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				BD482541236B3C4F00FC12E9 /* QuakeDetailView.swift */,
-				04DC3E83246823B900CFB3AF /* GraphView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -396,7 +393,6 @@
 				044FAE9E246FD9AF00DDDA43 /* SettingsTableViewController.swift in Sources */,
 				04A59447245F18CD0081FF68 /* QuakeFetcher.swift in Sources */,
 				0461E2FE246015C7004880B8 /* SearchTableViewController.swift in Sources */,
-				04DC3E84246823B900CFB3AF /* GraphView.swift in Sources */,
 				04A5944A245F4F480081FF68 /* QuakeDetailView.swift in Sources */,
 				04A59446245F16C60081FF68 /* QuakeResults.swift in Sources */,
 				04DC3E822466939300CFB3AF /* WebViewController.swift in Sources */,

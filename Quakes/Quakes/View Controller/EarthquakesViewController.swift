@@ -235,6 +235,11 @@ extension EarthquakesViewController: MKMapViewDelegate {
 
 extension EarthquakesViewController: SettingsManagementDelegate {
     func settingsDidChanged() {
+        guard let quakes = quakesArray else {
+            return
+        }
+        self.mapView.removeAnnotations(quakes)
+        
         fetchQuakes()
         setupUI()
     }
