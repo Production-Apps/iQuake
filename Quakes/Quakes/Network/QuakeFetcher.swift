@@ -59,12 +59,13 @@ class QuakeFetcher {
         let startTime = dateFormatter.string(from: dateInterval.start)
         let endTime = dateFormatter.string(from: dateInterval.end)
         
-        let lightQUakes = defaults.bool(forKey: "LightQuakesPref")
+        let lightQuakes = defaults.bool(forKey: "LightQuakesPref")
+
         var showLightQuakes: String {
-            if lightQUakes {
-                return "4"
+            if !lightQuakes {
+                return "4.0"
             }else{
-                return "0"
+                return "0.0"
             }
         }
         
@@ -82,7 +83,7 @@ class QuakeFetcher {
             completion(nil, QuakeError.invalidURL)
             return
         }
-        
+
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             
 

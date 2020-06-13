@@ -8,12 +8,16 @@
 
 import UIKit
 
+protocol SettingsManagementDelegate: class {
+    func settingsDidChanged()
+}
+
 class SettingsTableViewController: UITableViewController {
-    
     
     //MARK: - Properties
     private let defaults = UserDefaults.standard
-    
+    private var settingHasChanged = false
+    weak var delegate: SettingsManagementDelegate?
     
     //MARK: - Outlets
     @IBOutlet weak var zoomSileder: UISlider!
@@ -27,29 +31,42 @@ class SettingsTableViewController: UITableViewController {
         updateSettings()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        if settingHasChanged{
+            delegate?.settingsDidChanged()
+        }
+    }
+    
     //MARK: - Setup UI
     
     private func updateSettings(){
         kmSwitch.isOn = defaults.bool(forKey: "LightQuakesPref")
-        zoomSileder.value = defaults.float(forKey: "LocationZoom") / 10
         locationSwitch.isOn = defaults.bool(forKey: "LocationPref")
+        
+        //If use location is disable/enable then disable/enable slider
+        zoomSileder.isEnabled = locationSwitch.isOn
+        zoomSileder.value = defaults.float(forKey: "LocationZoom") / 10
     }
     
     //MARK: - Actions
     
     @IBAction func lightQuakesTap(_ sender: UISwitch) {
         defaults.set(sender.isOn, forKey: "LightQuakesPref")
+       settingHasChanged=true
     }
     
     @IBAction func zoomSliderMoved(_ sender: UISlider) {
         
         let value = round(sender.value) * 10
-        
         defaults.set(value, forKey: "LocationZoom")
+        settingHasChanged=true
     }
     
     @IBAction func locationSwitchTap(_ sender: UISwitch) {
         defaults.set(sender.isOn, forKey: "LocationPref")
+        settingHasChanged = true
+        //Disable zoom if use my location is disable
+        zoomSileder.isEnabled = sender.isOn
     }
     
     //MARK: - Prepare

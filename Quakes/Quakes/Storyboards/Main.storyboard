@@ -42,6 +42,9 @@
                                     <action selector="dismissViewButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBb-gk-jfD"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="NjW-q3-o6H">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -49,8 +52,10 @@
                             <constraint firstAttribute="bottom" secondItem="Lw5-8F-FCH" secondAttribute="bottom" id="6SV-GQ-ITQ"/>
                             <constraint firstItem="kTd-wp-h5n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="GSm-Wh-t1p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lw5-8F-FCH" secondAttribute="trailing" id="J5Z-lx-1YY"/>
+                            <constraint firstItem="NjW-q3-o6H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LP9-Tt-OlS"/>
                             <constraint firstItem="Lw5-8F-FCH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xlr-WW-uEi"/>
                             <constraint firstItem="Lw5-8F-FCH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tCq-oY-qvL"/>
+                            <constraint firstItem="NjW-q3-o6H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v4l-Eg-hqd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -62,11 +67,12 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="gear" catalog="system" id="4zs-zx-6tf">
                             <connections>
-                                <segue destination="Rxn-rv-nkk" kind="show" id="QNR-Ls-NoV"/>
+                                <segue destination="Rxn-rv-nkk" kind="show" identifier="SettingsSegue" id="QNR-Ls-NoV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loadingIndicator" destination="NjW-q3-o6H" id="dIv-zp-KJb"/>
                         <outlet property="locationArrowLabel" destination="kTd-wp-h5n" id="2Se-RA-ng7"/>
                         <outlet property="mapView" destination="Lw5-8F-FCH" id="GbV-PA-NI8"/>
                         <outlet property="searchButton" destination="e2e-KW-HQb" id="J9d-CD-1xq"/>

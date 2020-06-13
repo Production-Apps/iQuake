@@ -24,24 +24,30 @@ class EarthquakesViewController: UIViewController {
     @IBOutlet var mapView: MKMapView!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var locationArrowLabel: UIButton!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupUI()
         
         mapView.delegate = self
         
         fetchQuakes()
         
-        //Create a reusable cell
+        //Create a reusable Annotations
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "QuakeView")
     }
     
     //MARK: - Private Methods
     
     private func setupUI(){
+        
+        locationArrowLabel.isHidden = !self.defaults.bool(forKey: "LocationPref")
+        loadingIndicator.startAnimating()
+        loadingIndicator.hidesWhenStopped = true
         searchButton.isEnabled = false
         locationArrowLabel.layer.cornerRadius = 5
     }
@@ -66,12 +72,14 @@ class EarthquakesViewController: UIViewController {
     }
     
     private func networkAlert() {
+        
         let alertController = UIAlertController(title: "Network error", message: "The internet connection appears to be offline.", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(alertAction)
         
         DispatchQueue.main.async {
             self.present(alertController, animated: true, completion: nil)
+            self.loadingIndicator.stopAnimating()
         }
     }
     
@@ -88,10 +96,15 @@ class EarthquakesViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.searchButton.isEnabled = true
+                self.loadingIndicator.stopAnimating()
                 //Create annotations
                 self.mapView.addAnnotations(quakes)
             }
-            self.currentLocation()
+            //Read from user defaults if user want to use his location
+            let useMyLocation = self.defaults.bool(forKey: "LocationPref")
+            if useMyLocation{
+                self.currentLocation()
+            }
         }
     }
     
@@ -169,12 +182,12 @@ class EarthquakesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SearchSegue"{
             
-            guard let searchVC = segue.destination as? SearchTableViewController else {
-                print("Cannot downcast SearchVC")
-                return
-            }
+            guard let searchVC = segue.destination as? SearchTableViewController else { return }
             
             searchVC.quakesArray = self.quakesArray ?? []
+        }else if segue.identifier == "SettingsSegue"{
+            guard let settingsVC = segue.destination as? SettingsTableViewController else { return }
+            settingsVC.delegate = self
         }
     }
 }
@@ -218,4 +231,13 @@ extension EarthquakesViewController: MKMapViewDelegate {
         
         return annotationView
     }
+}
+
+extension EarthquakesViewController: SettingsManagementDelegate {
+    func settingsDidChanged() {
+        fetchQuakes()
+        setupUI()
+    }
+    
+    
 }
