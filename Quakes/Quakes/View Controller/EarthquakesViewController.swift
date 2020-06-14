@@ -133,9 +133,9 @@ class EarthquakesViewController: UIViewController {
         let coordinateRegion = MKCoordinateRegion(center: location, span: coordinateSpan)
         
         lookUpCurrentLocation { locationName in
-            DispatchQueue.main.async {
-                self.navigationItem.title = locationName?.locality
-            }
+//            DispatchQueue.main.async {
+//                self.navigationItem.title = locationName?.locality
+//            }
             
             self.mapView.setRegion(coordinateRegion, animated: true)
         }

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--iQuake-->
+        <!--EZQuakes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EarthquakesViewController" customModule="Quakes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EarthquakesViewController" customModule="EZQuakes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,14 +34,6 @@
                                     <action selector="currentLocationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v4A-CD-2Vb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mh-d8-6vx">
-                                <rect key="frame" x="6" y="24" width="74" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="clear.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="dismissViewButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBb-gk-jfD"/>
-                                </connections>
-                            </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="NjW-q3-o6H">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                             </activityIndicatorView>
@@ -59,7 +51,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="iQuake" id="4im-xI-rde">
+                    <navigationItem key="navigationItem" title="EZQuakes" id="4im-xI-rde">
                         <barButtonItem key="leftBarButtonItem" systemItem="search" id="e2e-KW-HQb">
                             <connections>
                                 <segue destination="GZZ-E0-F2E" kind="show" identifier="SearchSegue" id="glL-bK-43v"/>
@@ -85,7 +77,7 @@
         <!--Settings-->
         <scene sceneID="Cuu-Eo-2gd">
             <objects>
-                <tableViewController id="Rxn-rv-nkk" customClass="SettingsTableViewController" customModule="Quakes" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Rxn-rv-nkk" customClass="SettingsTableViewController" customModule="EZQuakes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bR8-Po-BJC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -317,7 +309,7 @@
         <!--Search Table View Controller-->
         <scene sceneID="FZw-di-0D7">
             <objects>
-                <tableViewController id="GZZ-E0-F2E" customClass="SearchTableViewController" customModule="Quakes" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="GZZ-E0-F2E" customClass="SearchTableViewController" customModule="EZQuakes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S21-xK-jPt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -386,10 +378,10 @@
             </objects>
             <point key="canvasLocation" x="1754" y="-817"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Details-->
         <scene sceneID="Hr8-iZ-bTU">
             <objects>
-                <viewController id="tuZ-vZ-Do6" customClass="DetailViewController" customModule="Quakes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tuZ-vZ-Do6" customClass="DetailViewController" customModule="EZQuakes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rt2-YN-0RL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -409,11 +401,11 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Es7-CF-wau">
                                                         <rect key="frame" x="58.5" y="0.0" width="265" height="117.5"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wCU-38-iS9">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wCU-38-iS9">
                                                                 <rect key="frame" x="0.0" y="15.5" width="113" height="86.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magnitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wt-U6-Ira">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="64.5" height="18.5"/>
+                                                                        <rect key="frame" x="24.5" y="0.0" width="64.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                                         <color key="textColor" white="1" alpha="0.80182470034246578" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -426,11 +418,11 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tF4-Ns-q2M">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tF4-Ns-q2M">
                                                                 <rect key="frame" x="163" y="15.5" width="102" height="86.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depth (km)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUa-H5-Ihl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="18.5"/>
+                                                                        <rect key="frame" x="17" y="0.0" width="68.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                                         <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -550,7 +542,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="10S-MF-wVP"/>
                     </view>
-                    <navigationItem key="navigationItem" id="g3X-zd-gIl">
+                    <navigationItem key="navigationItem" title="Details" id="g3X-zd-gIl">
                         <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="WfR-qm-gNr">
                             <connections>
                                 <segue destination="nbP-lR-PcO" kind="show" identifier="WebView" id="7EV-NS-dh8"/>
@@ -571,10 +563,10 @@
             </objects>
             <point key="canvasLocation" x="2665.217391304348" y="-818.30357142857144"/>
         </scene>
-        <!--USGS-->
+        <!--Web-->
         <scene sceneID="rQY-n6-4u2">
             <objects>
-                <viewController id="nbP-lR-PcO" customClass="WebViewController" customModule="Quakes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nbP-lR-PcO" customClass="WebViewController" customModule="EZQuakes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H1A-2h-dgJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -597,7 +589,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dQe-0Q-4eI"/>
                     </view>
-                    <navigationItem key="navigationItem" title="USGS" id="X6U-RG-RDY">
+                    <navigationItem key="navigationItem" title="Web" id="X6U-RG-RDY">
                         <barButtonItem key="rightBarButtonItem" image="safari" catalog="system" id="VMS-Kf-GWL">
                             <connections>
                                 <action selector="openSafaryButtonPressed:" destination="nbP-lR-PcO" id="8Bz-tG-Zai"/>
@@ -637,10 +629,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="efl-q1-4Kb"/>
+        <segue reference="7EV-NS-dh8"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="clear.fill" catalog="system" width="128" height="114"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="location" catalog="system" width="128" height="115"/>

@@ -89,16 +89,6 @@ class SearchTableViewController: UITableViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "DetailViewSegue"{
-            guard let detailVC = segue.destination as? DetailViewController else { return }
-            DispatchQueue.main.async {
-                detailVC.selectedQuake = self.selectedQuake
-            }
-            
-        }
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         //FIXME: Dispose of any resources that can be recreated.
@@ -150,9 +140,21 @@ class SearchTableViewController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailViewSegue"{
+            guard let detailVC = segue.destination as? DetailViewController else { return }
+            DispatchQueue.main.async {
+                detailVC.selectedQuake = self.selectedQuake
+            }
+            
+        }
+    }
+    
+    //MARK: - Actions
     @IBAction func segmentedButtonPRessed(_ sender: UISegmentedControl) {
         sortResults()
     }
+    
     
 }
 

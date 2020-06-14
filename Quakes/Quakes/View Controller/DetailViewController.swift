@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import GaugeKit
 
 class DetailViewController: UIViewController, MKMapViewDelegate {
     
@@ -29,8 +28,6 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     }
     
     private var formatter = Formatter()
-    
-    var gauge = Gauge()
 
     //MARK: - View Life Cycle
     

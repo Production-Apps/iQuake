@@ -7,7 +7,7 @@ target 'Quakes' do
 
   # Pods for Quakes
 
-pod "GaugeKit"
+
 
   target 'QuakesTests' do
     inherit! :search_paths
