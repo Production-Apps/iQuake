@@ -132,50 +132,16 @@ class EarthquakesViewController: UIViewController {
         
         let coordinateRegion = MKCoordinateRegion(center: location, span: coordinateSpan)
         
-        lookUpCurrentLocation { locationName in
-//            DispatchQueue.main.async {
-//                self.navigationItem.title = locationName?.locality
-//            }
-            
+        DispatchQueue.main.async {
             self.mapView.setRegion(coordinateRegion, animated: true)
         }
     }
     
-    private func lookUpCurrentLocation(completionHandler: @escaping (CLPlacemark?)
-        -> Void ) {
-        // Use the last reported location.
-        if let lastLocation = self.locationManager.location {
-            let geocoder = CLGeocoder()
-            
-            // Look up the location and pass it to the completion handler
-            geocoder.reverseGeocodeLocation(lastLocation,
-                                            completionHandler: { (placemarks, error) in
-                                                if error == nil {
-                                                    let firstLocation = placemarks?[0]
-                                                    completionHandler(firstLocation)
-                                                }
-                                                else {
-                                                    // An error occurred during geocoding.
-                                                    print("Could not locate")
-                                                    completionHandler(nil)
-                                                }
-            })
-        }
-        else {
-            // No location was available.
-            print("Could not locate2")
-            completionHandler(nil)
-        }
-    }
     
     //MARK: - Actions
     
     @IBAction func currentLocationButtonPressed(_ sender: UIButton) {
         currentLocation(manualRequest: true)
-    }
-    
-    @IBAction func dismissViewButtonPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
     }
     
     //MARK: - prepare
