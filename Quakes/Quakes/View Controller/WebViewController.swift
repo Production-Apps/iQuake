@@ -66,6 +66,18 @@ class WebViewController: UIViewController {
         webView.addSubview(loadSpinner)
     }
     
+    private func networkAlert() {
+        
+        let alertController = UIAlertController(title: "Server error", message: "The internet may be offline, or there is an issue with the server, please try again later", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alertController.addAction(alertAction)
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
 }
 
 //MARK: - WKNavigationDelegate
@@ -83,7 +95,14 @@ extension WebViewController: WKNavigationDelegate  {
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print("Fail error")
         loadSpinner.stopAnimating()
-        
+        networkAlert()
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        print("Provitioning error")
+        loadSpinner.stopAnimating()
+        networkAlert()
     }
 }
