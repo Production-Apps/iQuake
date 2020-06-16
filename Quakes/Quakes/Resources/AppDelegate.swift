@@ -15,6 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+        
+        let defaults = UserDefaults.standard
+        //If nil/false set default values else use current values for settings
+        if !defaults.bool(forKey: "initialLaunchCompleted"){
+            defaults.set(true, forKey: "LightQuakesPref")
+            defaults.set(true, forKey: "LocationPref")
+            defaults.set(50, forKey: "LocationZoom")
+            //Set to true so the values above dont overwrite user preferences
+            defaults.set(true, forKey: "initialLaunchCompleted")
+        }
+        
 		return true
 	}
 
