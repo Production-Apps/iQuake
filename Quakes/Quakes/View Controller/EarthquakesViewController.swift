@@ -151,6 +151,7 @@ class EarthquakesViewController: UIViewController {
             guard let searchVC = segue.destination as? SearchTableViewController else { return }
             
             searchVC.quakesArray = self.quakesArray ?? []
+            
         }else if segue.identifier == "SettingsSegue"{
             guard let settingsVC = segue.destination as? SettingsTableViewController else { return }
             settingsVC.delegate = self

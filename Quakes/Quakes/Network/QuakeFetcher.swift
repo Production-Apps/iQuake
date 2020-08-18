@@ -49,6 +49,8 @@ class QuakeFetcher {
         fetchQuakes(from: interval, completion: completion)
     }
     
+    
+    
     func fetchQuakes(from dateInterval: DateInterval,
                      completion: @escaping ([Quake]?, Error?) -> Void) {
         
@@ -112,6 +114,7 @@ class QuakeFetcher {
                 //Setup date
                 decoder.dateDecodingStrategy = .millisecondsSince1970
                 let quakeResults = try decoder.decode(QuakeResults.self, from: data)
+                
                 completion(quakeResults.quakes, nil)
             } catch {
                 DispatchQueue.main.async {
