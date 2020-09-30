@@ -1,4 +1,4 @@
-# ![](./Quakes/Quakes/Assets.xcassets/AppIcon.appiconset/1024.png) EZQuake
+# ![](./Quakes/Quakes/Assets.xcassets/AppIcon.appiconset/40.png) EZQuake
 
 ## Introduction
 
