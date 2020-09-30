@@ -13,8 +13,8 @@ An iOS app designed to monitor earthquake activity in real time.
 
 ## Apple AppStore
 
-     [Download app now](https://apps.apple.com/us/app/ezquakes/id1518458855)
+[Download app now](https://apps.apple.com/us/app/ezquakes/id1518458855)
 
 ## Images
 
-    ![](./Quakes/Quakes/Assets.xcassets/AppIcon.appiconset/20.png)
+![](./Quakes/Quakes/Assets.xcassets/AppIcon.appiconset/20.png)
