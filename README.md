@@ -2,15 +2,15 @@
 
 ## Introduction
 
-You will be creating an app that tracks the amount of time you are working on a particular job for a client to accurately invoice them for based on how much you charge per hour.
+An iOS app designed to monitor earthquake activity in real time.
 
-    - An iOS app designed to convert metric units into imperial units.
-    - AdMob as monetization technology.
-    - Followed the MVVM design pattern.
-    - Implemented UI and unit testing.
-    - Version control using Github.
-    - Created using Swift as the primary language.
+       - An iOS app designed to monitor earthquake activity in real time.
+       - MapKit and annotations to show latest activity.
+       - WebKit to display more details for the specific event.
+       - Implemented unit Testing.
+       - Followed the MVC design pattern.
+       - Networking and Json parsing to make API calls to USGS.
 
 ## Apple AppStore
 
-    ![](https://apps.apple.com/us/app/unitly/id1501719971#?platform=iphone)
+     [Download app now.](https://apps.apple.com/us/app/ezquakes/id1518458855)
