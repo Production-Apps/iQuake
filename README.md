@@ -22,6 +22,4 @@ An iOS app designed to monitor earthquake activity in real time.
 
 ## License
 
-A short snippet describing the license (MIT, Apache etc)
-
-MIT © Fritz Gamboa
+MIT © [Fritz Gamboa](https://fritzgt.com/)
