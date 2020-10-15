@@ -54,7 +54,7 @@ class QuakeFetcher {
     func fetchQuakes(from dateInterval: DateInterval,
                      completion: @escaping ([Quake]?, Error?) -> Void) {
         
-        
+        //Create the url components
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         
         // startTime, endTime, format
@@ -71,6 +71,7 @@ class QuakeFetcher {
             }
         }
         
+        //Items for the query
         let queryItems = [
             URLQueryItem(name: "starttime", value: startTime),
             URLQueryItem(name: "endtime", value: endTime),
@@ -80,12 +81,14 @@ class QuakeFetcher {
         
         urlComponents?.queryItems = queryItems
         
+        
         guard let url = urlComponents?.url else {
             print("Error creating URL from components")
             completion(nil, QuakeError.invalidURL)
             return
         }
 
+        //Implement the dataTask method
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             
 
@@ -94,13 +97,14 @@ class QuakeFetcher {
                 return
             }
             
-            //Error handling
+            //1.Check if there is an error
             if let error = error {
                     completion(nil, error)
                 return
             }
-
             
+            
+            //2.Check if data were return
             guard let data = data else {
 
                 DispatchQueue.main.async {
@@ -108,13 +112,17 @@ class QuakeFetcher {
                 }
                 return
             }
-                        
+        
+            //3.Decode data to use in the view
             do {
+                //1.Create instance of JSONDecoder
                 let decoder = JSONDecoder()
                 //Setup date
                 decoder.dateDecodingStrategy = .millisecondsSince1970
-                let quakeResults = try decoder.decode(QuakeResults.self, from: data)
                 
+                //2.Try to decode/match into QuakeResults Model
+                let quakeResults = try decoder.decode(QuakeResults.self, from: data)
+                //3.Return usable data to viewController
                 completion(quakeResults.quakes, nil)
             } catch {
                 DispatchQueue.main.async {
